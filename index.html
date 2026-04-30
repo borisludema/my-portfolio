@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boris Ludema - Portfolio</title>
+  <title>Boris Ludema - Data Analytics Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -20,409 +20,84 @@
       --border: rgba(99,102,241,0.2);
       --gradient: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
-
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(15,15,26,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 0;
-    }
-
-    nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -0.5px;
-    }
-
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,15,26,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 1rem 0; }
+    nav { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.4rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.5px; }
     nav ul { list-style: none; display: flex; gap: 2.5rem; }
-
-    nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
     nav a:hover { color: var(--primary); }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 600px; height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(99,102,241,0.15);
-      border: 1px solid var(--border);
-      color: var(--primary);
-      padding: 0.4rem 1rem;
-      border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 1.25rem;
-      letter-spacing: -1px;
-    }
-
-    .hero h1 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 520px;
-      margin: 0 auto 2.5rem;
-      font-weight: 300;
-    }
-
+    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    .hero-badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--border); color: var(--primary); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -1px; }
+    .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-subtitle { font-size: 1.1rem; color: var(--secondary); font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.5px; }
+    .hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 580px; margin: 0 auto 2.5rem; font-weight: 300; }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--gradient);
-      color: white;
-      padding: 0.85rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: opacity 0.3s, transform 0.3s;
-      box-shadow: 0 4px 20px rgba(99,102,241,0.4);
-    }
-
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gradient); color: white; padding: 0.85rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity 0.3s, transform 0.3s; box-shadow: 0 4px 20px rgba(99,102,241,0.4); }
     .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: transparent;
-      color: var(--text);
-      padding: 0.85rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: 1px solid var(--border);
-      transition: border-color 0.3s, transform 0.3s;
-    }
-
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--text); padding: 0.85rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid var(--border); transition: border-color 0.3s, transform 0.3s; }
     .btn-secondary:hover { border-color: var(--primary); transform: translateY(-2px); }
-
-    .scroll-indicator {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      animation: bounce 2s infinite;
-    }
-
-    .scroll-indicator::after {
-      content: '';
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, var(--primary), transparent);
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(6px); }
-    }
-
+    .scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.75rem; animation: bounce 2s infinite; }
+    .scroll-indicator::after { content: ''; width: 1px; height: 40px; background: linear-gradient(to bottom, var(--primary), transparent); }
+    @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
     section { padding: 5rem 2rem; }
     .container { max-width: 1100px; margin: 0 auto; }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      font-weight: 800;
-      margin-bottom: 1rem;
-      letter-spacing: -0.5px;
-    }
-
-    .section-subtitle {
-      color: var(--text-muted);
-      font-size: 1rem;
-      max-width: 560px;
-      margin-bottom: 3.5rem;
-    }
-
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 0.75rem; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.5px; }
+    .section-subtitle { color: var(--text-muted); font-size: 1rem; max-width: 560px; margin-bottom: 3.5rem; }
     #about { background: var(--bg-card); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
     .about-text p { color: var(--text-muted); margin-bottom: 1rem; font-size: 1rem; }
     .about-text p strong { color: var(--text); }
-
-    .stats-row { display: flex; gap: 2rem; margin-top: 2rem; }
-
-    .stat {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(99,102,241,0.08);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      flex: 1;
-    }
-
-    .stat-num {
-      font-size: 2rem;
-      font-weight: 800;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 1rem;
-    }
-
-    .skill-chip {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1.25rem 1rem;
-      background: var(--bg-card2);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      transition: border-color 0.3s, transform 0.3s;
-    }
-
+    .experience-item { padding: 1rem 1.25rem; background: rgba(99,102,241,0.06); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 0.75rem; }
+    .exp-role { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+    .exp-period { font-size: 0.72rem; color: var(--secondary); font-weight: 500; margin-top: 0.2rem; }
+    .stats-row { display: flex; gap: 1rem; margin-top: 2rem; }
+    .stat { text-align: center; padding: 1rem 0.75rem; background: rgba(99,102,241,0.08); border: 1px solid var(--border); border-radius: 12px; flex: 1; }
+    .stat-num { font-size: 1.6rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-label { font-size: 0.65rem; color: var(--text-muted); margin-top: 0.25rem; line-height: 1.3; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.85rem; }
+    .skill-chip { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; padding: 1rem 0.75rem; background: var(--bg-card2); border: 1px solid var(--border); border-radius: 12px; font-size: 0.8rem; font-weight: 500; color: var(--text-muted); transition: border-color 0.3s, transform 0.3s; text-align: center; }
     .skill-chip:hover { border-color: var(--primary); transform: translateY(-3px); color: var(--text); }
-    .skill-icon { font-size: 1.6rem; }
-
+    .skill-icon { font-size: 1.4rem; }
     #projects { background: var(--bg); }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: border-color 0.3s, transform 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--gradient);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
+    .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient); opacity: 0; transition: opacity 0.3s; }
     .project-card:hover { border-color: var(--primary); transform: translateY(-5px); }
     .project-card:hover::before { opacity: 1; }
-
-    .project-tag {
-      display: inline-block;
-      background: rgba(99,102,241,0.15);
-      color: var(--primary);
-      padding: 0.25rem 0.75rem;
-      border-radius: 100px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-bottom: 1rem;
-    }
-
-    .project-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text); }
-    .project-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .project-tag { display: inline-block; background: rgba(99,102,241,0.15); color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 1rem; }
+    .project-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text); }
+    .project-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.6; }
     .project-links { display: flex; gap: 1rem; }
-
-    .project-link {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--primary);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: color 0.3s;
-    }
-
+    .project-link { font-size: 0.8rem; font-weight: 600; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.3rem; transition: color 0.3s; }
     .project-link:hover { color: var(--secondary); }
-
+    .coming-soon { font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
     #contact { background: var(--bg-card); }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
     .contact-info p { color: var(--text-muted); margin-bottom: 2rem; }
     .contact-items { display: flex; flex-direction: column; gap: 1rem; }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem 1.25rem;
-      background: rgba(99,102,241,0.08);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      text-decoration: none;
-      color: var(--text);
-      transition: border-color 0.3s;
-    }
-
+    .contact-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: rgba(99,102,241,0.08); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: var(--text); transition: border-color 0.3s; }
     .contact-item:hover { border-color: var(--primary); }
-
-    .contact-icon {
-      width: 40px; height: 40px;
-      background: var(--gradient);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
+    .contact-icon { width: 40px; height: 40px; background: var(--gradient); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
     .contact-item-label { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.15rem; }
     .contact-item-value { font-size: 0.9rem; font-weight: 500; }
-
     .contact-form { display: flex; flex-direction: column; gap: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
     .form-group label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
-
-    .form-group input,
-    .form-group textarea {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.85rem 1rem;
-      color: var(--text);
-      font-family: inherit;
-      font-size: 0.9rem;
-      transition: border-color 0.3s;
-      outline: none;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus { border-color: var(--primary); }
+    .form-group input, .form-group textarea { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 0.85rem 1rem; color: var(--text); font-family: inherit; font-size: 0.9rem; transition: border-color 0.3s; outline: none; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
     .form-group textarea { resize: vertical; min-height: 120px; }
-
-    footer {
-      background: var(--bg);
-      border-top: 1px solid var(--border);
-      padding: 2rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
     footer span { color: var(--primary); }
-
-    @media (max-width: 768px) {
-      nav ul { gap: 1.5rem; }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .stats-row { gap: 1rem; }
-      .hero-btns { flex-direction: column; align-items: center; }
-    }
-
+    @media (max-width: 768px) { nav ul { gap: 1.5rem; } .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; } .stats-row { gap: 0.75rem; } .hero-btns { flex-direction: column; align-items: center; } }
     @media (max-width: 480px) { nav ul { display: none; } }
   </style>
 </head>
@@ -430,7 +105,7 @@
 
   <header>
     <nav>
-      <div class="logo">Boris.dev</div>
+      <div class="logo">Boris Ludema</div>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -442,11 +117,12 @@
 
   <section class="hero">
     <div>
-      <div class="hero-badge">&#128075; Available for work</div>
+      <div class="hero-badge">&#128205; Rotterdam, Netherlands</div>
       <h1>Hi, I'm <span>Boris Ludema</span></h1>
-      <p>A passionate web developer &amp; designer crafting beautiful, high-performance digital experiences.</p>
+      <div class="hero-subtitle">Global Data Analytics Engineer</div>
+      <p>Turning raw data into strategy &mdash; building scalable pipelines, analytics platforms, and BI solutions across global operations.</p>
       <div class="hero-btns">
-        <a href="#projects" class="btn-primary">&#128196; View My Work</a>
+        <a href="#projects" class="btn-primary">&#128202; View My Work</a>
         <a href="#contact" class="btn-secondary">&#128172; Get In Touch</a>
       </div>
     </div>
@@ -458,37 +134,39 @@
       <div class="about-grid">
         <div class="about-text">
           <div class="section-label">About Me</div>
-          <h2 class="section-title">Building the web, one pixel at a time</h2>
-          <p>I'm <strong>Boris Ludema</strong>, a web developer and designer with a passion for creating clean, functional, and visually stunning websites.</p>
-          <p>I love turning ideas into reality through code &mdash; from crafting intuitive user interfaces to building robust back-end systems.</p>
-          <p>When I'm not coding, I'm exploring new design trends, contributing to open-source, or sketching out the next big idea.</p>
+          <h2 class="section-title">Data professional with 7+ years of experience</h2>
+          <p>I'm <strong>Boris Ludema</strong>, a Global Data Analytics Engineer based in <strong>Rotterdam, Netherlands</strong>. I work at <strong>Alphatron Marine &amp; JRC Europe</strong>, where I lead data analytics initiatives across multiple global regions.</p>
+          <p>My work spans the full data lifecycle: from architecting scalable pipelines and platforms to designing end-to-end BI solutions, building APIs, and translating complex business needs into actionable data products.</p>
+          <p>I'm passionate about data governance, analytics maturity, and enabling teams to make smarter decisions through well-engineered data infrastructure.</p>
           <div class="stats-row">
-            <div class="stat">
-              <div class="stat-num">3+</div>
-              <div class="stat-label">Years Coding</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">10+</div>
-              <div class="stat-label">Projects Built</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">100%</div>
-              <div class="stat-label">Passion</div>
-            </div>
+            <div class="stat"><div class="stat-num">7+</div><div class="stat-label">Years at Alphatron Marine</div></div>
+            <div class="stat"><div class="stat-num">4</div><div class="stat-label">Roles Progressed</div></div>
+            <div class="stat"><div class="stat-num">&#127758;</div><div class="stat-label">Global Scope &amp; Impact</div></div>
+          </div>
+          <div style="margin-top:2rem;">
+            <div class="section-label" style="margin-bottom:0.75rem;">Career at Alphatron Marine</div>
+            <div class="experience-item"><div class="exp-role">Global Data Analytics Engineer</div><div class="exp-period">Jan 2024 &ndash; Present &bull; Rotterdam, Hybrid</div></div>
+            <div class="experience-item"><div class="exp-role">Global Data Analyst</div><div class="exp-period">Jan 2022 &ndash; Jan 2024</div></div>
+            <div class="experience-item"><div class="exp-role">Global Data Manager</div><div class="exp-period">Jan 2020 &ndash; Jan 2022</div></div>
+            <div class="experience-item"><div class="exp-role">Purchase Administrator</div><div class="exp-period">2019 &ndash; Jan 2020</div></div>
           </div>
         </div>
         <div>
           <div class="section-label">My Stack</div>
           <h2 class="section-title">Tools &amp; Technologies</h2>
           <div class="skills-grid" id="skills">
-            <div class="skill-chip"><span class="skill-icon">&#127760;</span>HTML5</div>
-            <div class="skill-chip"><span class="skill-icon">&#127912;</span>CSS3</div>
-            <div class="skill-chip"><span class="skill-icon">&#9889;</span>JavaScript</div>
-            <div class="skill-chip"><span class="skill-icon">&#8987;</span>React</div>
-            <div class="skill-chip"><span class="skill-icon">&#128230;</span>Node.js</div>
-            <div class="skill-chip"><span class="skill-icon">&#128450;</span>Git</div>
-            <div class="skill-chip"><span class="skill-icon">&#9729;</span>Vercel</div>
-            <div class="skill-chip"><span class="skill-icon">&#127756;</span>Figma</div>
+            <div class="skill-chip"><span class="skill-icon">&#9201;</span>TimeExtender</div>
+            <div class="skill-chip"><span class="skill-icon">&#129693;</span>MS Fabric</div>
+            <div class="skill-chip"><span class="skill-icon">&#9729;</span>Azure</div>
+            <div class="skill-chip"><span class="skill-icon">&#128202;</span>Power BI</div>
+            <div class="skill-chip"><span class="skill-icon">&#128200;</span>SQL</div>
+            <div class="skill-chip"><span class="skill-icon">&#129520;</span>DAX</div>
+            <div class="skill-chip"><span class="skill-icon">&#128736;</span>SSAS</div>
+            <div class="skill-chip"><span class="skill-icon">&#9889;</span>Power Automate</div>
+            <div class="skill-chip"><span class="skill-icon">&#128451;</span>OneLake</div>
+            <div class="skill-chip"><span class="skill-icon">&#128269;</span>BI &amp; Analytics</div>
+            <div class="skill-chip"><span class="skill-icon">&#127757;</span>Data Governance</div>
+            <div class="skill-chip"><span class="skill-icon">&#128101;</span>Stakeholder Mgmt</div>
           </div>
         </div>
       </div>
@@ -499,33 +177,30 @@
     <div class="container">
       <div class="section-label">Projects</div>
       <h2 class="section-title">Things I've Built</h2>
-      <p class="section-subtitle">A selection of my recent work. Each project represents a unique challenge and learning experience.</p>
+      <p class="section-subtitle">SQL, DAX, and data engineering work I'm writing and sharing publicly. More projects will be added over time.</p>
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-tag">FULL STACK</div>
-          <h3>Portfolio Website</h3>
-          <p>My personal portfolio built with HTML, CSS, and JavaScript. Deployed on Vercel with continuous integration via GitHub.</p>
+          <div class="project-tag">SQL</div>
+          <h3>SQL Scripts &amp; Queries</h3>
+          <p>A collection of SQL scripts for data extraction, transformation, reporting automation, and database management &mdash; built across operational and analytical environments.</p>
           <div class="project-links">
-            <a href="#" class="project-link">&#128279; Live Demo</a>
-            <a href="https://github.com/borisludema/my-portfolio" class="project-link">&#128196; Source Code</a>
+            <a href="https://github.com/borisludema" class="project-link" target="_blank">&#128196; View on GitHub</a>
           </div>
         </div>
         <div class="project-card">
-          <div class="project-tag">FRONTEND</div>
-          <h3>Project Two</h3>
-          <p>A dynamic and responsive web application showcasing modern CSS techniques, animations, and interactive JavaScript features.</p>
+          <div class="project-tag">DAX</div>
+          <h3>DAX Measures &amp; Models</h3>
+          <p>Power BI DAX measures and data models for business intelligence dashboards, KPI tracking, and advanced analytics across global operations data.</p>
           <div class="project-links">
-            <a href="#" class="project-link">&#128279; Live Demo</a>
-            <a href="#" class="project-link">&#128196; Source Code</a>
+            <a href="https://github.com/borisludema" class="project-link" target="_blank">&#128196; View on GitHub</a>
           </div>
         </div>
         <div class="project-card">
-          <div class="project-tag">DESIGN</div>
-          <h3>Project Three</h3>
-          <p>A UI/UX focused project exploring clean design principles, accessibility standards, and user-centered development approaches.</p>
+          <div class="project-tag">COMING SOON</div>
+          <h3>More Projects</h3>
+          <p>More work covering Microsoft Fabric, Azure pipelines, TimeExtender models, and analytics engineering will be added here regularly.</p>
           <div class="project-links">
-            <a href="#" class="project-link">&#128279; Live Demo</a>
-            <a href="#" class="project-link">&#128196; Source Code</a>
+            <span class="coming-soon">&#8987; Check back soon</span>
           </div>
         </div>
       </div>
@@ -537,14 +212,21 @@
       <div class="contact-grid">
         <div class="contact-info">
           <div class="section-label">Contact</div>
-          <h2 class="section-title">Let's Work Together</h2>
-          <p>I'm always open to new opportunities, collaborations, and exciting projects. Drop me a message!</p>
+          <h2 class="section-title">Let's Connect</h2>
+          <p>Open to collaborations, freelance data projects, or just a good conversation about data engineering and analytics. Feel free to reach out!</p>
           <div class="contact-items">
             <a href="mailto:borisludema@gmail.com" class="contact-item">
               <div class="contact-icon">&#9993;</div>
               <div>
                 <div class="contact-item-label">Email</div>
                 <div class="contact-item-value">borisludema@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/boris-ludema-403983183/" class="contact-item" target="_blank">
+              <div class="contact-icon">&#128188;</div>
+              <div>
+                <div class="contact-item-label">LinkedIn</div>
+                <div class="contact-item-value">Boris Ludema</div>
               </div>
             </a>
             <a href="https://github.com/borisludema" class="contact-item" target="_blank">
@@ -554,28 +236,12 @@
                 <div class="contact-item-value">github.com/borisludema</div>
               </div>
             </a>
-            <a href="#" class="contact-item">
-              <div class="contact-icon">&#128188;</div>
-              <div>
-                <div class="contact-item-label">LinkedIn</div>
-                <div class="contact-item-value">linkedin.com/in/borisludema</div>
-              </div>
-            </a>
           </div>
         </div>
         <form class="contact-form" onsubmit="return false;">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" placeholder="John Doe">
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="john@example.com">
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea placeholder="Tell me about your project..."></textarea>
-          </div>
+          <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Doe"></div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@example.com"></div>
+          <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project or question..."></textarea></div>
           <button type="submit" class="btn-primary" style="border:none;cursor:pointer;justify-content:center;">&#9993; Send Message</button>
         </form>
       </div>
@@ -583,7 +249,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2026 <span>Boris Ludema</span>. Designed &amp; built with &#10084;&#65039;</p>
+    <p>&copy; 2026 <span>Boris Ludema</span> &mdash; Data Analytics Engineer &bull; Rotterdam, Netherlands</p>
   </footer>
 
 </body>
